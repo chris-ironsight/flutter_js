@@ -26,6 +26,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace 'io.abner.flutter_js'
+    }
+
     compileSdkVersion 29
 
     kotlinOptions {
